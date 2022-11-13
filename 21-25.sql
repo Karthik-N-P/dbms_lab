@@ -5,7 +5,8 @@ alter table  DEPT_LOCATIONS drop foreign key fk_deptlocations_department;
 alter table  WORKS_ON drop foreign key fk_workson_employee;
 alter table  PROJECT drop foreign key PROJECT_ibfk_1;
 alter table  WORKS_ON drop foreign key fk_workson_project;
-alter table  DEPENDENT drop foreign key DEPENDENT_ibfk_1;  
+alter table  DEPENDENT drop foreign key DEPENDENT_ibfk_1; 
+alter table  WORKS_ON drop foreign key WORKS_ON_ibfk_1;
 
 Alter table DEPARTMENT
 ADD foreign key (mgrssn) references EMPLOYEE(ssn) ON DELETE CASCADE;
