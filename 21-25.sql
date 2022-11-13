@@ -2,6 +2,9 @@
 
 Delete from DEPARTMENT where dnumber=3;
 
+-- 22 delete employees of research dpt
+Delete from EMPLOYEE where dno in (SELECT dnumber from DEPARTMENT where dname='Research');
+
 -- 24) change the location dnum of projectno 10 to kerala and 5 
 UPDATE PROJECT set plocation='kolkata', dnum=5 where PNUMBER=2;
 SELECT * from PROJECT
