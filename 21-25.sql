@@ -1,6 +1,10 @@
 --21) delete the dpt no 3 from database
+alter table  DEPARTMENT drop foreign key DEPARTMENT_ibfk_1;                     
+alter table  EMPLOYEE drop foreign key EMPLOYEE_ibfk_2;
+alter table  DEPT_LOCATIONS drop foreign key fk_deptlocations_department;
 
 Delete from DEPARTMENT where dnumber=3;
+
 
 -- 22 delete employees of research dpt
 Delete from EMPLOYEE where dno in (SELECT dnumber from DEPARTMENT where dname='Research');
