@@ -1,3 +1,5 @@
+-- droping all foreign keys
+
 alter table  DEPARTMENT drop foreign key DEPARTMENT_ibfk_1;                     
 alter table  EMPLOYEE drop foreign key EMPLOYEE_ibfk_2;
 alter table  EMPLOYEE drop foreign key EMPLOYEE_ibfk_1;
@@ -8,6 +10,8 @@ alter table  WORKS_ON drop foreign key fk_workson_project;
 alter table  DEPENDENT drop foreign key DEPENDENT_ibfk_1; 
 alter table  WORKS_ON drop foreign key WORKS_ON_ibfk_1;
 
+
+-- adding foreign key with on delete cascade
 Alter table DEPARTMENT
 ADD foreign key (mgrssn) references EMPLOYEE(ssn) ON DELETE CASCADE;
 
